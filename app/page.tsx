@@ -1,22 +1,22 @@
 import Navbar from './components/Navbar';
 export default function Home() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-black min-h-screen overflow-hidden">
       {/* NAVBAR */}
 
       <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold">Prime City Guide</div>
+          <div className="text-3xl font-black tracking-tight">Prime City Guide</div>
 
           {/* Search */}
-          <div className="hidden md:flex flex-1 mx-10">
-            <input
-              type="text"
-              placeholder="Search cities, places, services..."
-              className="w-full border border-gray-300 rounded-full px-5 py-3 outline-none"
-            />
-          </div>
+          <div className="hidden md:flex flex-1 max-w-xl mx-12">
+  <input
+    type="text"
+    placeholder="Search cities, places, services..."
+    className="w-full px-6 py-3 rounded-full border border-gray-300 outline-none"
+  />
+</div>
 
           {/* Menu */}
           <div className="flex items-center gap-8 text-sm font-medium">
@@ -31,95 +31,226 @@ export default function Home() {
         </div>
       </nav>
       {/* HERO SECTION */}
-      <section className="relative h-screen pt-40 flex items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative h-[980px] overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop')",
-          }}
-        ></div>
+  className="absolute inset-0 bg-cover bg-right"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1974&auto=format&fit=crop')",
+  }}
+></div>
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/95 via-[#020817]/75 to-transparent"></div>
 
         {/* Main Content */}
-        <div className="relative z-10 text-center px-8 py-10 max-w-5xl rounded-[40px] bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl">
-          <p className="uppercase tracking-[6px] text-sm text-gray-300 mb-6">
-            PRIME CITY GUIDE
-          </p>
+        <div className="relative z-10 pl-20 pt-36 max-w-[720px]">
+        <p className="uppercase tracking-[5px] text-[18px] text-[#F4B400] mb-8 font-medium">
+  DISCOVER. COMPARE. DECIDE.
+</p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Discover Trusted Places,
-            <br />
-            Services & Experiences
-          </h1>
+          <h1 className="text-[4.4rem] leading-[0.92] font-extrabold tracking-[-3px] text-white">
+  Discover Trusted
+  <br />
+  <span className="text-[#F4B400]">Places,</span> Services &
+  <br />
+  Experiences
+</h1>
 
-          <p className="mt-8 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Explore restaurants, schools, marriage halls, cafes, hospitals and
-            city experiences — all in one modern discovery platform.
-          </p>
+<p className="mt-8 text-[1.15rem] leading-10 text-gray-300 max-w-[680px]">
+  Explore the best restaurants, schools, marriage halls,
+  cafes, hospitals and more — all in one place, all in your city.
+</p>
 
           {/* Search Bar */}
-          <div className="mt-10 flex justify-center">
-            <input
-              type="text"
-              placeholder="Search your city..."
-              className="w-full max-w-2xl rounded-full px-6 py-4 text-black text-lg outline-none"
-            />
-          </div>
+          <div className="mt-10 flex items-center bg-white rounded-2xl overflow-hidden w-[710px] shadow-2xl">
+  
+  <div className="px-6 text-black text-2xl">
+    ⌖
+  </div>
 
-          {/* Category Chips */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <div className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
-              Restaurants
-            </div>
+  <input
+    type="text"
+    placeholder="Search for a city, place or service..."
+    className="flex-1 py-6 text-black outline-none text-lg"
+  />
 
-            <div className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
-              Schools
-            </div>
+  <button className="bg-[#F4B400] hover:bg-[#e0a800] transition px-10 py-6 text-black font-semibold text-xl">
+    Search
+  </button>
 
-            <div className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
-              Marriage Halls
-            </div>
+</div>
 
-            <div className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
-              Cafes
-            </div>
+          {/* Category Cards */}
+<div className="mt-10 flex gap-5">
 
-            <div className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
-              Hospitals
-            </div>
-          </div>
-        </div>
+{/* Restaurants */}
+<div className="w-[132px] h-[122px] rounded-[20px] border border-[#24384d] bg-[#081321]/85 backdrop-blur-xl flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.45)]">
 
-        {/* Floating Cards */}
+  <div className="w-12 h-12 rounded-full bg-[#0b1a29] flex items-center justify-center mb-3">
+  <svg
+  width="28"
+  height="28"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#F4B400"
+  strokeWidth="1.8"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M6 2v8" />
+  <path d="M10 2v8" />
+  <path d="M8 2v20" />
+  
+  <path d="M15 2c2 2 2 6 0 8" />
+  <path d="M15 10v12" />
+</svg>
+  </div>
 
-        <div className="absolute bottom-10 left-10 hidden lg:block">
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-5 w-64 text-white shadow-2xl">
-            <p className="text-sm text-gray-300 mb-2">Trending Now</p>
+  <p className="text-white text-[16px] font-normal">
+    Restaurants
+  </p>
+</div>
 
-            <h3 className="text-xl font-semibold">Best Rooftop Restaurants</h3>
 
-            <p className="mt-2 text-sm text-gray-300">
-              Explore premium dining experiences across your city.
-            </p>
-          </div>
-        </div>
+{/* Schools */}
+<div className="w-[132px] h-[122px] rounded-[20px] border border-[#24384d] bg-[#081321]/85 backdrop-blur-xl flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.45)]">
 
-        <div className="absolute top-24 right-10 hidden lg:block">
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-5 w-60 text-white shadow-2xl">
-            <p className="text-sm text-gray-300 mb-2">Featured Category</p>
+  <div className="w-12 h-12 rounded-full bg-[#0b1a29] flex items-center justify-center mb-3">
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F4B400"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 9l10-5 10 5-10 5-10-5z"/>
+      <path d="M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/>
+    </svg>
+  </div>
 
-            <h3 className="text-xl font-semibold">Marriage Halls</h3>
+  <p className="text-white text-[16px] font-normal">
+    Schools
+  </p>
+</div>
 
-            <p className="mt-2 text-sm text-gray-300">
-              Discover elegant venues for unforgettable celebrations.
-            </p>
-          </div>
-        </div>
-      </section>
+
+{/* Marriage Halls */}
+<div className="w-[132px] h-[122px] rounded-[20px] border border-[#24384d] bg-[#081321]/85 backdrop-blur-xl flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.45)]">
+
+  <div className="w-12 h-12 rounded-full bg-[#0b1a29] flex items-center justify-center mb-3">
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F4B400"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 21h18"/>
+      <path d="M5 21V7l7-4 7 4v14"/>
+      <path d="M9 21v-6h6v6"/>
+      <path d="M10 9h.01"/>
+      <path d="M14 9h.01"/>
+    </svg>
+  </div>
+
+  <p className="text-white text-[16px] font-normal">
+    Marriage Halls
+  </p>
+</div>
+
+
+{/* Cafes */}
+<div className="w-[132px] h-[122px] rounded-[20px] border border-[#24384d] bg-[#081321]/85 backdrop-blur-xl flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.45)]">
+
+  <div className="w-12 h-12 rounded-full bg-[#0b1a29] flex items-center justify-center mb-3">
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F4B400"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 8h13v5a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+      <path d="M16 10h1a3 3 0 0 1 0 6h-1"/>
+      <path d="M6 2v3"/>
+      <path d="M10 2v3"/>
+      <path d="M14 2v3"/>
+    </svg>
+  </div>
+
+  <p className="text-white text-[16px] font-normal">
+    Cafes
+  </p>
+</div>
+
+
+{/* Hospitals */}
+<div className="w-[132px] h-[122px] rounded-[20px] border border-[#24384d] bg-[#081321]/85 backdrop-blur-xl flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.45)]">
+
+  <div className="w-12 h-12 rounded-full bg-[#0b1a29] flex items-center justify-center mb-3">
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F4B400"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 5v14"/>
+      <path d="M5 12h14"/>
+    </svg>
+  </div>
+
+  <p className="text-white text-[16px] font-normal">
+    Hospitals
+  </p>
+</div>
+
+</div>
+      
+      {/* Scroll Down Indicator */}
+<div className="mt-14 flex flex-col items-center justify-center">
+  <p className="text-white tracking-[4px] text-sm uppercase mb-5">
+    Scroll To Explore
+  </p>
+
+  <a
+  href="#explore"
+  className="w-11 h-11 rounded-full border border-white/70 flex items-center justify-center hover:bg-white/10 transition"
+>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-5 h-5 text-white"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19 14l-7 7-7-7"
+      />
+    </svg>
+    </a>
+
+</div>
+</div>
+        </section> 
+      
       {/* POPULAR CATEGORIES SECTION */}
 
       <section className="bg-white py-24 px-6">
@@ -137,7 +268,7 @@ export default function Home() {
                   "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop')",
               }}
             >
-              <div className="absolute inset-0 bg-black/40"></div>
+<div className="absolute inset-0 bg-[#071320]/80"></div>
               <h3 className="relative z-10">Restaurants</h3>
             </div>
 
@@ -149,7 +280,7 @@ export default function Home() {
                   "url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1200&auto=format&fit=crop')",
               }}
             >
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 bg-[#071320]/80"></div>
               <h3 className="relative z-10">Schools</h3>
             </div>
 
@@ -161,7 +292,7 @@ export default function Home() {
                   "url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop')",
               }}
             >
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 bg-[#071320]/80"></div>
               <h3 className="relative z-10">Marriage Halls</h3>
             </div>
 
@@ -173,7 +304,7 @@ export default function Home() {
                   "url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop')",
               }}
             >
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 bg-[#071320]/80"></div>
               <h3 className="relative z-10">Cafes</h3>
             </div>
           </div>
@@ -186,9 +317,11 @@ export default function Home() {
           <div className="flex items-center justify-between mb-14">
             <h2 className="text-4xl font-bold">Featured Listings</h2>
 
-            <button className="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition">
-              View All
-            </button>
+            <button
+  className="bg-[#F4B400] hover:bg-[#e0a800] transition text-black px-7 py-4 font-semibold"
+>
+  Search
+</button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -276,7 +409,7 @@ export default function Home() {
       </section>
       {/* FEATURED CITIES SECTION */}
 
-      <section className="bg-black text-white py-24 px-6">
+      <section id="explore" className="bg-black text-white py-24 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
 
